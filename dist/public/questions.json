@@ -1,0 +1,274 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "Easy",
+      "category": "地理",
+      "question": "世界で最も面積が大きい国はどこでしょう？",
+      "choices": ["カナダ", "中国", "ロシア", "アメリカ"],
+      "answerIndex": 2,
+      "explanation": "ロシアは約1,710万km²の面積を持ち、世界最大の国です。2位はカナダ、3位はアメリカです。"
+    },
+    {
+      "id": 2,
+      "difficulty": "Easy",
+      "category": "科学",
+      "question": "水の化学式はどれでしょう？",
+      "choices": ["CO2", "H2O", "O2", "NaCl"],
+      "answerIndex": 1,
+      "explanation": "水の化学式はH2O（水素2つと酸素1つ）です。CO2は二酸化炭素、O2は酸素、NaClは塩化ナトリウム（食塩）です。"
+    },
+    {
+      "id": 3,
+      "difficulty": "Easy",
+      "category": "歴史",
+      "question": "日本の初代内閣総理大臣は誰でしょう？",
+      "choices": ["西郷隆盛", "伊藤博文", "大久保利通", "木戸孝允"],
+      "answerIndex": 1,
+      "explanation": "伊藤博文は1885年に日本初の内閣総理大臣に就任しました。明治時代の重要な政治家です。"
+    },
+    {
+      "id": 4,
+      "difficulty": "Easy",
+      "category": "一般常識",
+      "question": "1年は何日あるでしょう？（うるう年を除く）",
+      "choices": ["364日", "365日", "366日", "360日"],
+      "answerIndex": 1,
+      "explanation": "通常の年は365日です。うるう年は4年に1度訪れ、366日になります。"
+    },
+    {
+      "id": 5,
+      "difficulty": "Easy",
+      "category": "スポーツ",
+      "question": "サッカーで1チームは何人でプレーするでしょう？",
+      "choices": ["9人", "10人", "11人", "12人"],
+      "answerIndex": 2,
+      "explanation": "サッカーは1チーム11人でプレーします。ゴールキーパー1人とフィールドプレーヤー10人で構成されます。"
+    },
+    {
+      "id": 6,
+      "difficulty": "Easy",
+      "category": "文学・芸術",
+      "question": "「走れメロス」の作者は誰でしょう？",
+      "choices": ["夏目漱石", "芥川龍之介", "太宰治", "森鴎外"],
+      "answerIndex": 2,
+      "explanation": "「走れメロス」は太宰治の代表作の一つです。友情と信頼をテーマにした短編小説です。"
+    },
+    {
+      "id": 7,
+      "difficulty": "Easy",
+      "category": "地理",
+      "question": "日本で最も高い山はどれでしょう？",
+      "choices": ["富士山", "北岳", "槍ヶ岳", "立山"],
+      "answerIndex": 0,
+      "explanation": "富士山は標高3,776mで日本最高峰です。静岡県と山梨県にまたがる活火山です。"
+    },
+    {
+      "id": 8,
+      "difficulty": "Easy",
+      "category": "科学",
+      "question": "光の速さは約何km/秒でしょう？",
+      "choices": ["30万km/秒", "3万km/秒", "300km/秒", "3,000km/秒"],
+      "answerIndex": 0,
+      "explanation": "光の速さは真空中で約30万km/秒（正確には299,792.458km/秒）です。宇宙で最も速い速度です。"
+    },
+    {
+      "id": 9,
+      "difficulty": "Easy",
+      "category": "一般常識",
+      "question": "虹は何色で構成されているでしょう？",
+      "choices": ["5色", "6色", "7色", "8色"],
+      "answerIndex": 2,
+      "explanation": "虹は赤・橙・黄・緑・青・藍・紫の7色で構成されています。光の屈折と反射によって見えます。"
+    },
+    {
+      "id": 10,
+      "difficulty": "Easy",
+      "category": "歴史",
+      "question": "鎌倉幕府を開いたのは誰でしょう？",
+      "choices": ["源頼朝", "源義経", "平清盛", "北条時政"],
+      "answerIndex": 0,
+      "explanation": "源頼朝は1192年に征夷大将軍に任命され、鎌倉幕府を開きました。日本初の武家政権です。"
+    },
+    {
+      "id": 11,
+      "difficulty": "Normal",
+      "category": "地理",
+      "question": "世界で最も長い川はどれでしょう？",
+      "choices": ["アマゾン川", "ナイル川", "長江", "ミシシッピ川"],
+      "answerIndex": 1,
+      "explanation": "ナイル川は全長約6,650kmで世界最長の川です。アフリカ大陸を北上し地中海に注ぎます。"
+    },
+    {
+      "id": 12,
+      "difficulty": "Normal",
+      "category": "科学",
+      "question": "元素記号「Au」が表す元素は何でしょう？",
+      "choices": ["銀", "金", "銅", "アルミニウム"],
+      "answerIndex": 1,
+      "explanation": "Auは金（Gold）の元素記号です。ラテン語のAurum（オーラム）に由来します。"
+    },
+    {
+      "id": 13,
+      "difficulty": "Normal",
+      "category": "歴史",
+      "question": "フランス革命が起こったのは西暦何年でしょう？",
+      "choices": ["1789年", "1799年", "1776年", "1815年"],
+      "answerIndex": 0,
+      "explanation": "フランス革命は1789年に始まりました。バスティーユ牢獄襲撃が革命の象徴的な出来事です。"
+    },
+    {
+      "id": 14,
+      "difficulty": "Normal",
+      "category": "文学・芸術",
+      "question": "「モナ・リザ」を描いた画家は誰でしょう？",
+      "choices": ["ミケランジェロ", "ラファエロ", "レオナルド・ダ・ヴィンチ", "ボッティチェリ"],
+      "answerIndex": 2,
+      "explanation": "「モナ・リザ」はレオナルド・ダ・ヴィンチの代表作です。ルーヴル美術館に所蔵されています。"
+    },
+    {
+      "id": 15,
+      "difficulty": "Normal",
+      "category": "スポーツ",
+      "question": "夏季オリンピックが初めて開催された都市はどこでしょう？",
+      "choices": ["パリ", "ロンドン", "アテネ", "ローマ"],
+      "answerIndex": 2,
+      "explanation": "第1回近代オリンピックは1896年にギリシャのアテネで開催されました。古代オリンピック発祥の地です。"
+    },
+    {
+      "id": 16,
+      "difficulty": "Normal",
+      "category": "科学",
+      "question": "人間の体で最も大きい臓器は何でしょう？",
+      "choices": ["肝臓", "肺", "皮膚", "心臓"],
+      "answerIndex": 2,
+      "explanation": "皮膚は人体最大の臓器で、成人で約1.6〜2m²の面積があります。体温調節や保護の役割を果たします。"
+    },
+    {
+      "id": 17,
+      "difficulty": "Normal",
+      "category": "地理",
+      "question": "地球の赤道の長さは約何kmでしょう？",
+      "choices": ["約20,000km", "約30,000km", "約40,000km", "約50,000km"],
+      "answerIndex": 2,
+      "explanation": "地球の赤道周長は約40,075kmです。メートル法はこの長さを基準に定められました。"
+    },
+    {
+      "id": 18,
+      "difficulty": "Normal",
+      "category": "一般常識",
+      "question": "日本の国花とされる花は何でしょう？",
+      "choices": ["梅", "桜", "菊", "藤"],
+      "answerIndex": 1,
+      "explanation": "桜は日本の国花として広く認識されています。法律で定められてはいませんが、文化的象徴です。"
+    },
+    {
+      "id": 19,
+      "difficulty": "Normal",
+      "category": "歴史",
+      "question": "ベルリンの壁が崩壊したのは西暦何年でしょう？",
+      "choices": ["1987年", "1988年", "1989年", "1990年"],
+      "answerIndex": 2,
+      "explanation": "ベルリンの壁は1989年11月9日に崩壊しました。東西ドイツ統一の象徴的な出来事です。"
+    },
+    {
+      "id": 20,
+      "difficulty": "Normal",
+      "category": "文学・芸術",
+      "question": "「第九交響曲」を作曲したのは誰でしょう？",
+      "choices": ["モーツァルト", "バッハ", "ベートーヴェン", "ショパン"],
+      "answerIndex": 2,
+      "explanation": "ベートーヴェンの交響曲第9番は「歓喜の歌」で知られる名曲です。彼の最後の交響曲でもあります。"
+    },
+    {
+      "id": 21,
+      "difficulty": "Hard",
+      "category": "科学",
+      "question": "アボガドロ定数の値は約いくつでしょう？",
+      "choices": ["6.02×10²³", "3.14×10²³", "9.81×10²³", "2.99×10²³"],
+      "answerIndex": 0,
+      "explanation": "アボガドロ定数は約6.02×10²³/molです。1モルあたりの粒子数を表す化学の基本定数です。"
+    },
+    {
+      "id": 22,
+      "difficulty": "Hard",
+      "category": "歴史",
+      "question": "ローマ帝国を東西に分割したのは誰でしょう？",
+      "choices": ["ネロ", "アウグストゥス", "テオドシウス1世", "コンスタンティヌス1世"],
+      "answerIndex": 2,
+      "explanation": "テオドシウス1世は395年に死去する際、帝国を2人の息子に分割しました。これが東西ローマ帝国の始まりです。"
+    },
+    {
+      "id": 23,
+      "difficulty": "Hard",
+      "category": "地理",
+      "question": "世界で最も深い海溝はどれでしょう？",
+      "choices": ["マリアナ海溝", "トンガ海溝", "フィリピン海溝", "ペルー・チリ海溝"],
+      "answerIndex": 0,
+      "explanation": "マリアナ海溝のチャレンジャー海淵は水深約10,920mで世界最深です。太平洋西部に位置します。"
+    },
+    {
+      "id": 24,
+      "difficulty": "Hard",
+      "category": "文学・芸術",
+      "question": "「神曲」の作者は誰でしょう？",
+      "choices": ["ダンテ", "ペトラルカ", "ボッカチオ", "アリオスト"],
+      "answerIndex": 0,
+      "explanation": "「神曲」はダンテ・アリギエーリの代表作です。地獄・煉獄・天国の3部から成るイタリア文学の最高傑作です。"
+    },
+    {
+      "id": 25,
+      "difficulty": "Hard",
+      "category": "科学",
+      "question": "DNAの二重らせん構造を発見したのは誰でしょう？",
+      "choices": ["メンデル", "ダーウィン", "ワトソンとクリック", "パスツール"],
+      "answerIndex": 2,
+      "explanation": "ジェームズ・ワトソンとフランシス・クリックが1953年にDNAの二重らせん構造を発見しました。"
+    },
+    {
+      "id": 26,
+      "difficulty": "Hard",
+      "category": "歴史",
+      "question": "百年戦争はイギリスとどこの国の間で起こったでしょう？",
+      "choices": ["スペイン", "フランス", "ドイツ", "イタリア"],
+      "answerIndex": 1,
+      "explanation": "百年戦争（1337-1453年）はイギリスとフランスの間で戦われました。ジャンヌ・ダルクが活躍した戦争です。"
+    },
+    {
+      "id": 27,
+      "difficulty": "Hard",
+      "category": "スポーツ",
+      "question": "マラソンの正式な距離は何kmでしょう？",
+      "choices": ["42.095km", "42.195km", "42.295km", "42.395km"],
+      "answerIndex": 1,
+      "explanation": "マラソンの正式距離は42.195kmです。1908年のロンドンオリンピックで確定されました。"
+    },
+    {
+      "id": 28,
+      "difficulty": "Hard",
+      "category": "一般常識",
+      "question": "国際連合の常任理事国は何カ国でしょう？",
+      "choices": ["4カ国", "5カ国", "6カ国", "7カ国"],
+      "answerIndex": 1,
+      "explanation": "国連安全保障理事会の常任理事国は5カ国です。アメリカ、イギリス、フランス、ロシア、中国で構成されます。"
+    },
+    {
+      "id": 29,
+      "difficulty": "Hard",
+      "category": "科学",
+      "question": "音速は約何m/秒でしょう？（15℃の空気中）",
+      "choices": ["約240m/秒", "約340m/秒", "約440m/秒", "約540m/秒"],
+      "answerIndex": 1,
+      "explanation": "15℃の空気中での音速は約340m/秒です。温度によって変化し、温度が高いほど速くなります。"
+    },
+    {
+      "id": 30,
+      "difficulty": "Hard",
+      "category": "地理",
+      "question": "世界で最も標高が高い首都はどこでしょう？",
+      "choices": ["キト", "ボゴタ", "ラパス", "アディスアベバ"],
+      "answerIndex": 2,
+      "explanation": "ボリビアのラパスは標高約3,640mで世界最高所の首都です。憲法上の首都はスクレですが、実質的な首都機能はラパスにあります。"
+    }
+  ]
+}
