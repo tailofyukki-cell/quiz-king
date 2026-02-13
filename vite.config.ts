@@ -154,7 +154,7 @@ const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(
 
 export default defineConfig({
   plugins,
-  base: '/quiz-king/',
+  // base: '/quiz-king/', // Removed for gh-pages deployment
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),
