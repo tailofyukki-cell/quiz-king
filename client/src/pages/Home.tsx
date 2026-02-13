@@ -1,25 +1,35 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
+/* Game Show Studio Design: Main quiz flow controller */
+import { useQuiz } from '@/contexts/QuizContext';
+import TitleScreen from './TitleScreen';
+import QuizScreen from './QuizScreen';
+import ResultScreen from './ResultScreen';
 
-/**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
- */
 export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
+  const { isQuizActive, questions, currentQuestionIndex, isLoading } = useQuiz();
 
-  return (
-    <div className="min-h-screen flex flex-col">
-      <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
-      </main>
-    </div>
-  );
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-background">
+        <div className="text-center">
+          <div className="font-display text-4xl font-bold text-primary mb-4 animate-pulse">
+            LOADING...
+          </div>
+          <p className="text-muted-foreground">問題データを読み込んでいます</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Show title screen if quiz is not active
+  if (!isQuizActive) {
+    return <TitleScreen />;
+  }
+
+  // Show result screen if all questions are answered
+  if (currentQuestionIndex >= questions.length) {
+    return <ResultScreen />;
+  }
+
+  // Show quiz screen during active quiz
+  return <QuizScreen />;
 }
