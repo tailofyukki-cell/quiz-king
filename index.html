@@ -1,25 +1,119 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クイズ王 - 4択クイズアプリ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Title Screen -->
+        <div id="title-screen" class="screen active">
+            <div class="spotlight spotlight-left"></div>
+            <div class="spotlight spotlight-right"></div>
+            <div class="container">
+                <h1 class="title">クイズ王</h1>
+                <p class="subtitle">4択クイズアプリ</p>
+                
+                <div class="settings">
+                    <div class="setting-group">
+                        <label for="difficulty">難易度</label>
+                        <select id="difficulty">
+                            <option value="easy">Easy</option>
+                            <option value="normal" selected>Normal</option>
+                            <option value="hard">Hard</option>
+                        </select>
+                    </div>
+                    
+                    <div class="setting-group">
+                        <label for="question-count">問題数</label>
+                        <select id="question-count">
+                            <option value="10" selected>10問</option>
+                            <option value="20">20問</option>
+                            <option value="30">30問</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button id="start-btn" class="btn btn-primary">START QUIZ</button>
+            </div>
+        </div>
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>クイズ王 - 4択クイズアプリ</title>    
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
-    <script type="module" crossorigin src="/assets/index-BaYSVBkt.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DCA8Uvkk.css">
-  </head>
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="screen">
+            <div class="spotlight spotlight-left"></div>
+            <div class="spotlight spotlight-right"></div>
+            <div class="container">
+                <div class="quiz-header">
+                    <div class="info-badge">
+                        <span class="label">QUESTION</span>
+                        <span id="current-question" class="value">1</span>/<span id="total-questions" class="value">10</span>
+                    </div>
+                    <div class="info-badge">
+                        <span class="label">SCORE</span>
+                        <span id="score" class="value">0</span>
+                    </div>
+                </div>
+                
+                <div class="progress-bar">
+                    <div id="progress" class="progress-fill"></div>
+                </div>
+                
+                <div class="question-card">
+                    <span id="category" class="category-badge">カテゴリ</span>
+                    <h2 id="question-text" class="question-text">問題文がここに表示されます</h2>
+                    
+                    <div id="choices" class="choices">
+                        <!-- Choices will be inserted here -->
+                    </div>
+                    
+                    <div id="explanation" class="explanation hidden">
+                        <p id="explanation-text"></p>
+                    </div>
+                    
+                    <button id="next-btn" class="btn btn-primary hidden">NEXT QUESTION</button>
+                </div>
+            </div>
+        </div>
 
-  <body>
-    <div id="root"></div>
-    <script
-      defer
-      src="https://manus-analytics.com/umami"
-      data-website-id="41fe2c64-6911-42bc-9bf0-a5fbf70e9bd6"></script>
-  </body>
+        <!-- Result Screen -->
+        <div id="result-screen" class="screen">
+            <div class="spotlight spotlight-left"></div>
+            <div class="spotlight spotlight-right"></div>
+            <div class="container">
+                <h1 class="title">QUIZ COMPLETE!</h1>
+                
+                <div class="result-card">
+                    <div class="score-display">
+                        <div class="score-big">
+                            <span id="final-score">0</span>
+                            <span class="score-divider">/</span>
+                            <span id="final-total">10</span>
+                        </div>
+                        <p class="score-label">正解数</p>
+                    </div>
+                    
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-label">正答率</span>
+                            <span id="accuracy" class="stat-value">0%</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">ランク</span>
+                            <span id="rank" class="stat-value rank-badge">-</span>
+                        </div>
+                    </div>
+                    
+                    <button id="restart-btn" class="btn btn-primary">PLAY AGAIN</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <script src="app.js"></script>
+</body>
 </html>

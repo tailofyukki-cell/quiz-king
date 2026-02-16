@@ -1,0 +1,414 @@
+/* Game Show Studio Design - Dark theme with gold accents */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navy-dark: #0a1628;
+    --navy-medium: #1a2942;
+    --navy-light: #2a3f5f;
+    --gold: #ffd700;
+    --gold-dark: #b8860b;
+    --white: #ffffff;
+    --green: #10b981;
+    --red: #ef4444;
+    --blue: #3b82f6;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--navy-dark);
+    color: var(--white);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.screen {
+    display: none;
+    min-height: 100vh;
+    padding: 2rem;
+    position: relative;
+}
+
+.screen.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spotlight {
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0.15;
+    filter: blur(100px);
+}
+
+.spotlight-left {
+    background: radial-gradient(circle, var(--gold) 0%, transparent 70%);
+    top: -200px;
+    left: -200px;
+}
+
+.spotlight-right {
+    background: radial-gradient(circle, var(--blue) 0%, transparent 70%);
+    bottom: -200px;
+    right: -200px;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Typography */
+.title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5rem;
+    text-align: center;
+    color: var(--gold);
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.1em;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.25rem;
+    color: var(--white);
+    opacity: 0.8;
+    margin-bottom: 3rem;
+}
+
+/* Settings */
+.settings {
+    background: var(--navy-medium);
+    border: 2px solid var(--navy-light);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.setting-group {
+    margin-bottom: 1.5rem;
+}
+
+.setting-group:last-child {
+    margin-bottom: 0;
+}
+
+.setting-group label {
+    display: block;
+    font-weight: 600;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.setting-group select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: var(--navy-dark);
+    border: 2px solid var(--navy-light);
+    border-radius: 8px;
+    color: var(--white);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.setting-group select:hover {
+    border-color: var(--gold);
+}
+
+.setting-group select:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1);
+}
+
+/* Buttons */
+.btn {
+    padding: 1rem 3rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+    color: var(--navy-dark);
+    box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+    display: block;
+    margin: 0 auto;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 30px rgba(255, 215, 0, 0.5);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Quiz Header */
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+}
+
+.info-badge {
+    background: var(--navy-medium);
+    border: 2px solid var(--navy-light);
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.info-badge .label {
+    font-size: 0.75rem;
+    color: var(--gold);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.info-badge .value {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: var(--navy-medium);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold) 0%, var(--gold-dark) 100%);
+    transition: width 0.5s ease;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+/* Question Card */
+.question-card {
+    background: var(--navy-medium);
+    border: 2px solid var(--navy-light);
+    border-radius: 16px;
+    padding: 2.5rem;
+}
+
+.category-badge {
+    display: inline-block;
+    background: var(--blue);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.question-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+/* Choices */
+.choices {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.choice {
+    background: var(--navy-dark);
+    border: 2px solid var(--navy-light);
+    border-radius: 12px;
+    padding: 1.25rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.choice:hover:not(.disabled) {
+    border-color: var(--gold);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
+}
+
+.choice.disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.choice.correct {
+    background: var(--green);
+    border-color: var(--green);
+    color: var(--white);
+}
+
+.choice.incorrect {
+    background: var(--red);
+    border-color: var(--red);
+    color: var(--white);
+}
+
+.choice-label {
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--gold);
+    flex-shrink: 0;
+}
+
+.choice.correct .choice-label,
+.choice.incorrect .choice-label {
+    color: var(--white);
+}
+
+.choice-text {
+    font-size: 1rem;
+    flex: 1;
+}
+
+/* Explanation */
+.explanation {
+    background: var(--navy-dark);
+    border-left: 4px solid var(--gold);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.explanation p {
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Result Screen */
+.result-card {
+    background: var(--navy-medium);
+    border: 2px solid var(--navy-light);
+    border-radius: 16px;
+    padding: 3rem;
+    text-align: center;
+}
+
+.score-display {
+    margin-bottom: 3rem;
+}
+
+.score-big {
+    font-family: 'Orbitron', monospace;
+    font-size: 5rem;
+    font-weight: 900;
+    color: var(--gold);
+    text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.score-divider {
+    opacity: 0.5;
+    margin: 0 0.5rem;
+}
+
+.score-label {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: var(--gold);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.stat-value {
+    font-family: 'Orbitron', monospace;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.rank-badge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    background: var(--gold);
+    color: var(--navy-dark);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .title {
+        font-size: 3rem;
+    }
+    
+    .choices {
+        grid-template-columns: 1fr;
+    }
+    
+    .quiz-header {
+        flex-direction: column;
+    }
+    
+    .score-big {
+        font-size: 3rem;
+    }
+    
+    .stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
